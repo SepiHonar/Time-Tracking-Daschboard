@@ -99,13 +99,19 @@ main{
 
 @media screen and (max-width: 768px) {
     
-    main{
-        display: flex;
-        
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 400px);
+        justify-content: center;
         align-items: center;
-        justify-content: flex-start;
-        /* height: 100vh; */
-        margin-left: 16px;
-    }
-    
+        color: #fff;
+        margin: 13px;
+       
+      }
+      main{
+          display: block;
+      }
+      .dailyBox{
+        margin-top: 20px;
+      }
 }
