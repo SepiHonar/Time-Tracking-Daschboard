@@ -21,6 +21,7 @@ body{
 }
 .grid-container {
     display: grid;
+    grid-gap: 10px;
     grid-template-columns: repeat(4, 200px);
     justify-content: center;
     align-items: center;
@@ -41,62 +42,179 @@ main{
     
     
 }
-.item1{
+.profile-box{
         background: hsl(246, 80%, 60%);
-        grid-row: 1 /3  ;   
+        grid-row: -2 /3  ;   
         z-index: 1;
         border-radius: 8%;
-        height: 200px;
+        height: 250px;
+        
         
        
     }
-    span{
-        font-size: small;
-        margin-left: 8px;
+    .under-Image{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 16px;
+        
     }
-    h2{
-        margin: 4px 50px;
+    .image-text{
+        font-size: small;
     }
 
 .profileImg{
-    /* display: flex; */
-    /* justify-content: flex-start; */
-    margin:8px 5px;
+    margin:8px 8px;
     width: 60px;
     border-radius: 50%;
     border: 3px solid white;
     
 }
-.selectDailyMonthlyWeekly{
+.select-area{
     grid-row: 1 / 5;
     border-radius: 8%;
     background: hsl(235, 46%, 20%);
     height: 150px;
-    padding-top:200px;
+    padding-top:150px;
    
 }
 
-.selectDailyMonthlyWeekly , .item1{
+.select-area , .profile-box{
     grid-column: 1 / 2;
 }
-.dailyBox {
+.list-Box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    padding: 0px;
+   
 
 }
-.dailyBox a{
+.list-Box a{
     color: #fff;
     text-decoration: none;
     
 }
-.dailyBox li{
+.list-Box li{
     margin: 8px 0;
 }
+.work-icon{
+    background:hsl(15, 100%, 70%) ;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 8%;
+    height:100px;
+    grid-row: 1 /-2;
+    padding-right: 8px;
+}
+.work-box{
+    grid-row: 3 / -2 ;
+    background: hsl(235, 46%, 20%);
+    height: 150px;
+    border-radius: 8%;
+    z-index: 3;
+}
 
+.work-icon , .work-box{
+    grid-column: 2 / 3;
+}
+.all-content-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+     
+}
+
+.game-icon{
+    background:hsl(195, 74%, 62%) ;
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+    border-radius: 8%;
+    grid-row: 1 /-2;
+}
+.game-box{
+    grid-row: 3 / -2 ;
+    background: hsl(235, 46%, 20%);
+    height: 150px;
+    border-radius: 8%;
+   
+}
+.game-icon , .game-box{
+    grid-column: 3/3;
+}
+.study-icon{
+    background: hsl(348, 100%, 68%) ;
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+    border-radius: 8%;
+    grid-row: 1 /-2;
+}
+.study-box{
+    grid-row: 3 / -2 ;
+    background: hsl(235, 46%, 20%);
+    height: 150px;
+    border-radius: 8%;
+}
+.study-icon , .study-box{
+    grid-column: 4/5;
+}
+.exercise-icon{
+    background: hsl(145, 58%, 55%);
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+    border-radius: 8%;
+    grid-row: 4/2;
+}
+.exercise-box{
+    grid-row: 5/3 ;
+    background: hsl(235, 46%, 20%);
+    height: 150px;
+    border-radius: 8%;
+
+}
+.exercise-icon , .exercise-box{
+    grid-column: 2/2;
+}
+.social-icon{
+    background: hsl(264, 64%, 52%);
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+    border-radius: 8%;
+    grid-row: 4/2;
+}
+.social-box{
+    grid-row: 5/3 ;
+    background: hsl(235, 46%, 20%);
+    height: 150px;
+    border-radius: 8%;
+}
+.social-box , .social-icon{
+    grid-column: 3/3;
+}
+.self-care-icon
+{
+    background: hsl(43, 84%, 65%);
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+    border-radius: 8%;
+    grid-row: 4/2;
+}
+.self-care-box{
+    grid-row: 5/3 ;
+    background: hsl(235, 46%, 20%);
+    height: 150px;
+    border-radius: 8%;
+}
+.self-care-box , .self-care-icon{
+    grid-column: 4/4;
+}
 @media screen and (max-width: 768px) {
     
     .grid-container {
@@ -111,7 +229,7 @@ main{
       main{
           display: block;
       }
-      .dailyBox{
+      .list-Box{
         margin-top: 20px;
       }
 }
