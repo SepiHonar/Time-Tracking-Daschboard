@@ -7,6 +7,9 @@
      padding: 0;
      margin: 0;
  }
+ html{
+     height: 100%;
+ }
 body{
     font-family: rubik;
     background-color: black;
@@ -20,9 +23,11 @@ body{
     flex-direction: column; */
 }
 .grid-container {
+    
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 200px);
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -31,51 +36,52 @@ body{
   .grid-container > div {
     font-size: 18px;
   }
+  
 main{
    
-    display: flex; 
-    justify-content: center;
+     display:grid ;
+    justify-items: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+   
+   
     
+}
+.profile{
+    display: grid;
+    grid-row: 1/3;
     
 }
 .profile-box{
         background: hsl(246, 80%, 60%);
-        grid-row: -2 /3  ;   
-        z-index: 1;
+        grid-row: 1 /3  ;     
+        z-index: 2;
         border-radius: 8%;
-        height: 250px;
-        
-        
-       
-    }
-    .under-Image{
+        height: 200px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         padding: 16px;
-        
     }
+    
     .image-text{
         font-size: small;
     }
 
 .profileImg{
-    margin:8px 8px;
+    margin:16px 8px;
     width: 60px;
     border-radius: 50%;
     border: 3px solid white;
     
 }
 .select-area{
-    grid-row: 1 / 5;
+    grid-row: 4/ 2;
     border-radius: 8%;
     background: hsl(235, 46%, 20%);
     height: 150px;
-    padding-top:150px;
+    padding-top:140px;
    
 }
 
@@ -99,25 +105,30 @@ main{
 .list-Box li{
     margin: 8px 0;
 }
+.work-div{
+    display: grid;
+    grid-row: 1/2;
+    
+}
 .work-icon{
     background:hsl(15, 100%, 70%) ;
     display: flex;
     justify-content: flex-end;
     border-radius: 8%;
     height:100px;
-    grid-row: 1 /-2;
+    grid-row: 1 /3;
     padding-right: 8px;
 }
 .work-box{
-    grid-row: 3 / -2 ;
+    grid-row: 4/2 ;
     background: hsl(235, 46%, 20%);
     height: 150px;
     border-radius: 8%;
-    z-index: 3;
+    z-index: 2;
 }
 
 .work-icon , .work-box{
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
 }
 .all-content-header{
     display: flex;
@@ -126,24 +137,47 @@ main{
     padding: 16px;
      
 }
-
+.all-content-body{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: 500;
+    
+ 
+}
+.previous{
+    margin-top: 16px;
+    font-size: x-small;
+    
+}
+.play-div{
+    display: grid;
+    
+}
 .game-icon{
     background:hsl(195, 74%, 62%) ;
     display: flex;
     justify-content: flex-end;
     height: 100px;
     border-radius: 8%;
-    grid-row: 1 /-2;
+    grid-row: 1 /3;
 }
 .game-box{
-    grid-row: 3 / -2 ;
+    grid-row: 4 / 2 ;
     background: hsl(235, 46%, 20%);
     height: 150px;
     border-radius: 8%;
+    z-index: 2;
+
    
 }
 .game-icon , .game-box{
-    grid-column: 3/3;
+    grid-column: 2/1;
+}
+.study-div{
+    display: grid;
 }
 .study-icon{
     background: hsl(348, 100%, 68%) ;
@@ -151,16 +185,20 @@ main{
     justify-content: flex-end;
     height: 100px;
     border-radius: 8%;
-    grid-row: 1 /-2;
+    grid-row: 1 /3;
 }
 .study-box{
-    grid-row: 3 / -2 ;
     background: hsl(235, 46%, 20%);
     height: 150px;
     border-radius: 8%;
+    grid-row: 4 / 2 ;
+    z-index: 3;
 }
 .study-icon , .study-box{
-    grid-column: 4/5;
+    grid-column: 3/1;
+}
+.exercise-div{
+    display: grid;
 }
 .exercise-icon{
     background: hsl(145, 58%, 55%);
@@ -168,17 +206,21 @@ main{
     justify-content: flex-end;
     height: 100px;
     border-radius: 8%;
-    grid-row: 4/2;
+    grid-row: 1/3;
 }
 .exercise-box{
-    grid-row: 5/3 ;
+    grid-row: 4/2 ;
     background: hsl(235, 46%, 20%);
     height: 150px;
     border-radius: 8%;
+    z-index: 4;
 
 }
 .exercise-icon , .exercise-box{
-    grid-column: 2/2;
+    grid-column: 2/1;
+}
+.social-div{
+    display: grid;
 }
 .social-icon{
     background: hsl(264, 64%, 52%);
@@ -186,16 +228,20 @@ main{
     justify-content: flex-end;
     height: 100px;
     border-radius: 8%;
-    grid-row: 4/2;
+    grid-row: 1/3;
 }
 .social-box{
-    grid-row: 5/3 ;
+    grid-row: 4/2 ;
     background: hsl(235, 46%, 20%);
     height: 150px;
     border-radius: 8%;
+    z-index: 3;
 }
 .social-box , .social-icon{
-    grid-column: 3/3;
+    grid-column: 2/1;
+}
+.self-div{
+    display: grid;
 }
 .self-care-icon
 {
@@ -204,32 +250,50 @@ main{
     justify-content: flex-end;
     height: 100px;
     border-radius: 8%;
-    grid-row: 4/2;
+    grid-row: 1/3;
 }
 .self-care-box{
-    grid-row: 5/3 ;
+    grid-row: 4/2 ;
     background: hsl(235, 46%, 20%);
     height: 150px;
     border-radius: 8%;
 }
 .self-care-box , .self-care-icon{
-    grid-column: 4/4;
+    grid-column: 2/1;
 }
 @media screen and (max-width: 768px) {
     
     .grid-container {
-        display: grid;
-        grid-template-columns: repeat(1, 400px);
+        display: inline;
         justify-content: center;
         align-items: center;
-        color: #fff;
-        margin: 13px;
-       
+        width: 70%;
+        color: #fff;      
       }
-      main{
-          display: block;
+      .select-area{
+          height: 70px;
       }
       .list-Box{
-        margin-top: 20px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          
       }
-}
+      
+      .list-Box a{
+      
+        margin: 0 10px;
+        
+    }
+    .grid-items{
+        margin: 10px
+    }   
+    .all-content-body{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+      }
+     
+     
